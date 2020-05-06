@@ -1,4 +1,4 @@
-# gatsby-theme-~banshorian~-banshorian
+# gatsby-theme-banshorian
 
 ## What this fork sets out to do
 
@@ -19,9 +19,7 @@ fork it, do some change and pull request. contact me @ marander@pm.me
 
 Initially this was a personal portfolio made in GatsbyJs, now it's a Gatsby theme available to anyone who wants to tell their work history focusing only on the content.
 
-![Gatsby Portfolio](https://raw.githubusercontent.com/webmaeistro/gatsby-theme-banshorian/dev/readme-files/banshorian.jpg)
 
-![Portfolio](https://raw.githubusercontent.com/webmaeistro/gatsby-theme-banshorian/dev/readme-files/portfolio.gif)
 
 - [Installation](#installation)
 - [Configuration](#configuration)

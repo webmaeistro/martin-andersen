@@ -17,9 +17,9 @@
     "lint-staged": "^10.2.2"
   },
   "name": "gatsby-theme-banshorian",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "main": "index.js",
-  "repository": "https://github.com/webmaeistro/gatsby-theme-banshorian.git",
+  "repository": "https://github.com/webmaeistro/martin-andersen.git",
   "author": "Martin Andersen <marander@pm.me>",
   "license": "MIT"
 }

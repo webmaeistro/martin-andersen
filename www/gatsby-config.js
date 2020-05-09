@@ -8,7 +8,7 @@ module.exports = {
         imagesPath: `src/images/`,
         iconFile: `src/images/icon.png`,
         siteTitle: `Software developer CV Martin Andersen`,
-        siteUrl: `https://martin-andersen-cv.now.sh`,
+        siteUrl: `https://martin-andersen.netlify.app`,
         siteName: `CV - Martin Andersen webmaeistro`,
         siteShortName: `MA`,
         siteDescription: `This cool App contains information about my work experience as a software developer.`,
@@ -40,7 +40,7 @@ module.exports = {
           availableToHire: true,
           dotColors: ["#0e3e1e", "#6CC551"],
           h1Text: `Hi!, I'm Martin Andersen`,
-          h2Text: `I'm a DevOps developer based out of Horten, Norway, who loves to make threejs + p5js WEBGL 3D animations. I have
+          h2Text: `I'm a fullstack designer + developer "unicorn" based out of Horten, Norway, who loves to make threejs + p5js WEBGL 3D animations. I have
               worked as a software developer since 2011.`,
           typewriter: [
             `Coding is my passion 😎`,

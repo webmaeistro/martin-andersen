@@ -3,22 +3,22 @@ import lineSvg from "../../static/assets/line.svg"
 
 const styles = css`
   .e404.layout-wrapper .layout-inner {
-    background: #fff;
+    background: #000000;
   }
   .e404 .data-section {
-    color: #000;
+    color: #ffffff;
   }
   .aboutme.layout-wrapper .layout-inner {
-    background: #fff;
+    background: #000000;
   }
   .aboutme .data-section {
-    color: #000;
+    color: #ffffff;
   }
   .aboutme .hamburgercolr::before,
   .aboutme .hamburgercolr::after,
   .e404 .hamburgercolr::before,
   .e404 .hamburgercolr::after {
-    background-color: #000;
+    background-color: #000000;
   }
   .home.layout-wrapper .layout-inner {
     background: #0e0f11;
@@ -27,10 +27,10 @@ const styles = css`
   }
   .home.layout-wrapper h1,
   .home.layout-wrapper h2 {
-    color: #fff;
+    color: #ffffff;
   }
   .skill.layout-wrapper .layout-inner {
-    color: #fff;
+    color: #ffffff;
     background: #9d316e;
     background: url(${lineSvg}) center center fixed,
       linear-gradient(45deg, #9d316e, #de2d3e);
@@ -48,15 +48,15 @@ const styles = css`
   .skill .hamburgercolr::after,
   .experience .hamburgercolr::before,
   .experience .hamburgercolr::after {
-    background-color: #fff;
+    background-color: #ffffff;
   }
   .home .btn-contact-color,
   .experience .btn-contact-color {
-    color: #fff;
+    color: #ffffff;
   }
   .aboutme .btn-contact-color,
   .e404 .btn-contact-color {
-    color: #000;
+    color: #000000;
   }
 `
 

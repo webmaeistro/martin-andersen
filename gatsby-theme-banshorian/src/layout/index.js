@@ -53,7 +53,7 @@ export default ({ children }) => {
         </div>
         <div className="copy">
           <a
-            href="https://github.com/webmaeistro/gatsby-theme-banshorian"
+            href="https://github.com/webmaeistro/martin-andersen"
             rel="nofollow"
             className="nolink"
             target="_blank"

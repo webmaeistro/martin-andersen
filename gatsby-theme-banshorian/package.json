@@ -1,10 +1,10 @@
 {
   "name": "gatsby-theme-banshorian",
-  "description": "A simplified way to create a portfolio using GatsbyJS. Based on byfolio",
+  "description": "A simplified way to create a cv/work/portfolio using GatsbyJS. Based on byfolio",
   "author": "Martin Andersen <marander@pm.me",
   "main": "index.js",
   "private": false,
-  "version": "1.9.0",
+  "version": "1.9.1",
   "license": "MIT",
   "keywords": [
     "gatsby",
@@ -23,7 +23,7 @@
     "test": "jest"
   },
   "peerDependencies": {
-    "gatsby": "^2.20.36",
+    "gatsby": "^2.21.21",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
@@ -33,7 +33,7 @@
     "animejs": "^3.2.0",
     "babel-jest": "^25.4.0",
     "babel-preset-gatsby": "^0.3.6",
-    "gatsby": "^2.20.36",
+    "gatsby": "^2.21.21",
     "gatsby-image": "^2.3.5",
     "gatsby-plugin-emotion": "^4.2.3",
     "gatsby-plugin-manifest": "^2.3.7",

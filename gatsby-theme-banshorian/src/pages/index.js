@@ -50,7 +50,7 @@ const Home = ({
   })
 
   return (
-    <LayoutContactMe bgClassName="contactME">
+    <LayoutContactMe bgClassName="contactMe">
       <Helmet>
         <title>{siteName}</title>
         <meta charset="UTF-8" />

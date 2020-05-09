@@ -16,7 +16,6 @@ fork it, do some change and pull request. contact me @ marander@pm.me
 
 ......................dottet-line......................
 
-
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Adding experience and skills](#adding-experience-and-skills)
@@ -143,7 +142,7 @@ module.exports = {
 | iconFile        | string  | Provides the icon path for the gatsby-plugin-manifest plugin                                                                          |
 | typographyPath  | string  | Place where the file that defines your website’s typography configuration is located                                                  |
 | siteTitle       | string  | The main title for the website, used in the `<title>` element                                                                         |
-| siteUrl         | string  | The portfolio url, example: `https://martin-andersen-cv.now.sh`                                                                           |
+| siteUrl         | string  | The portfolio url, example: `https://martin-andersen-cv.now.sh`                                                                       |
 | siteName        | string  | Represents the name of the web application as it is usually displayed to the user                                                     |
 | siteShortName   | string  | Represents a short version of the name of the web application                                                                         |
 | siteDescription | string  | Allows you to describe the purpose of the web application                                                                             |
@@ -394,5 +393,3 @@ Special thanks to:
 - [GatsbyJs](https://www.gatsbyjs.org/)
 - [Codrops](https://tympanus.net/codrops/)
 - [Fontawesome](https://fontawesome.com/license)
-
-

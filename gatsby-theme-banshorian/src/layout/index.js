@@ -54,7 +54,7 @@ export default ({ children }) => {
         <div className="copy">
           <a
             href="https://github.com/webmaeistro/martin-andersen"
-            rel="nofollow"
+            rel="noopener noreferrer"
             className="nolink"
             target="_blank"
           >
@@ -66,7 +66,7 @@ export default ({ children }) => {
                     <use xlinkHref="#icon-heart"></use>
                   </svg>
                 </div>
-                <div> using GatsbyJS</div>
+                <div> using GatsbyJs by Martin Andersen </div>
               </>
             ) : (
               <>

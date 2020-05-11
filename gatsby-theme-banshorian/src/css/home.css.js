@@ -2,11 +2,11 @@ import { css } from "@emotion/core"
 
 const styles = {
   blackColor: css`
-    color: #000000;
+    color: #000;
   `,
   dataSection: css`
     height: 100%;
-    color: #ffffff;
+    color: #fff;
   `,
   dataContainer: css`
     margin: 0 auto;

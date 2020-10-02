@@ -3,9 +3,8 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
-
-module.exports = {
-  basePath: `/`,
+const defaultOptions = {
+  basePath: ``,
   path: `${__dirname}/src/`,
   imagesPath: `${__dirname}/src/images/`,
   iconFile: `${__dirname}/src/images/icon.png`,
@@ -15,11 +14,11 @@ module.exports = {
   siteName: `Martin Andersen`,
   siteShortName: `MA`,
   siteDescription: `This cool App contains information about my work experience as a software developer.`,
-  siteKeywords: `Software developer, Full Stack Developer`,
+  siteKeywords: `Gatsbyjs, CV, Work portfolio, Full Stack Developer`,
   useMozJpeg: true,
   menuLinks: [
-    // title:   Link text
-    // color:   Animation background color on click
+    // title = Link text
+    // color = Animation background color on click
     { name: `home`, title: `Home`, color: `#000`, link: `` },
     { name: `experience`, title: `Experience`, color: `#3a3d98`, link: `` },
     { name: `skills`, title: `Skills`, color: `#d52d43`, link: `` },
@@ -45,8 +44,8 @@ module.exports = {
       `Gutenberg blocks rock`,
       `I'm a 🍕 lover`,
       `I'm a pretty fast learner and always interested in learning new technologies 🤓`,
-      `I think one of my values is the <strong>ability to resolve problems<strong>`,
-      `I like to share what I know 👨‍🏫`,
+      `I think one of my values is the <strong>ability to find solutions <strong>`,
+      `I like to share what I know`,
       `In my non-coding hours, I'm a' family man‍`,
       `I also do design and UX work using mostly <span style:'color: #27ae60;'>figma.com</span> `,
     ],
@@ -69,15 +68,13 @@ module.exports = {
   },
   footer: `heart`,
 }
-
-module.exports = function (userOptions = {}) {
+module.exports = (userOptions = {}) => {
   const options = Object.fromEntries(
     Object.entries(Object.assign({}, defaultOptions, userOptions)).map(
       ([key, value]) => {
         let newValue = value
-
         if (Array.isArray(value)) {
-          newValue: [
+          newValue = [
             ...new Map(
               [...defaultOptions[key], ...value].map((item) => [
                 item.name,
@@ -88,12 +85,10 @@ module.exports = function (userOptions = {}) {
         } else if (typeof value === "object") {
           newValue = { ...defaultOptions[key], ...value }
         }
-
         return [key, newValue]
       }
     )
   )
-
   const {
     basePath,
     path,
@@ -114,7 +109,6 @@ module.exports = function (userOptions = {}) {
     shapeColor,
     footer,
   } = options
-
   return {
     siteMetadata: {
       title: siteTitle,
@@ -171,6 +165,10 @@ module.exports = function (userOptions = {}) {
           theme_color: `#fff`,
           display: `standalone`,
           icon: iconFile,
+          icon_options: {
+            // For all the options available, please see https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/.
+            purpose: `any maskable`,
+          },
         },
       },
       {

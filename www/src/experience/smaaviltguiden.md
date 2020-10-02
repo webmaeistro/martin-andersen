@@ -103,4 +103,4 @@ Tittel: Småviltguiden - artskunnskap for jegere
 **Utgitt:** Høsten 2017
 
 **Hylles av Jegerforbundet!**  
-Norges Jeger- og Fiskerforbunds medlemsblad **Jakt & Fiske** omtaler Småviltguiden som en «særdeles grundig guide for småviltjegeren», med «detaljerte og naturtro tegninger og akvareller», der «også erfarne småviltjegere vil kunne lære noe nytt»!  
+Norges Jeger- og Fiskerforbunds medlemsblad **Jakt & Fiske** omtaler Småviltguiden som en «særdeles grundig guide for småviltjegeren», med «detaljerte og naturtro tegninger og akvareller», der «også erfarne småviltjegere vil kunne lære noe nytt»!

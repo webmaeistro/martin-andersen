@@ -2,8 +2,9 @@ import Typography from "typography"
 
 const typography = new Typography({
   baseFontSize: "16px",
-  googleFonts: [
-    {
+  /*
+    // googleFonts: [
+    // {
       name: "Source Sans Pro",
       styles: ["400", "700"],
     },
@@ -16,6 +17,7 @@ const typography = new Typography({
       styles: ["400", "700&display=swap"],
     },
   ],
+  */
   headerFontFamily: [
     "Source Sans Pro",
     "Avenir",

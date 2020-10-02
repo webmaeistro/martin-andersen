@@ -66,7 +66,7 @@ export default ({ children }) => {
                     <use xlinkHref="#icon-heart"></use>
                   </svg>
                 </div>
-                <div> using GatsbyJs </div>
+                <div> using GatsbyJs</div>
               </>
             ) : (
               <>

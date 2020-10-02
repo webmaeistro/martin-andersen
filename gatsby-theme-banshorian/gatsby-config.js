@@ -4,30 +4,30 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-module.exports = ({
-  basePath = ``,
-  path = `${__dirname}/src/`,
-  imagesPath = `${__dirname}/src/images/`,
-  iconFile = `${__dirname}/src/images/icon.png`,
-  typographyPath = `${__dirname}/src/utils/typography`,
-  siteTitle = `CV`,
-  siteUrl = `martin-andersen-cv.sh.now`,
-  siteName = `Martin Andersen`,
-  siteShortName = `MA`,
-  siteDescription = `This cool App contains information about my work experience as a software developer.`,
-  siteKeywords = `Software developer, Full Stack Developer`,
-  useMozJpeg = true,
-  menuLinks = [
-    // title = Link text
-    // color = Animation background color on click
+module.exports = {
+  basePath: `/`,
+  path: `${__dirname}/src/`,
+  imagesPath: `${__dirname}/src/images/`,
+  iconFile: `${__dirname}/src/images/icon.png`,
+  typographyPath: `${__dirname}/src/utils/typography`,
+  siteTitle: `CV`,
+  siteUrl: `martin-andersen-cv.vercel.app`,
+  siteName: `Martin Andersen`,
+  siteShortName: `MA`,
+  siteDescription: `This cool App contains information about my work experience as a software developer.`,
+  siteKeywords: `Software developer, Full Stack Developer`,
+  useMozJpeg: true,
+  menuLinks: [
+    // title:   Link text
+    // color:   Animation background color on click
     { name: `home`, title: `Home`, color: `#000`, link: `` },
     { name: `experience`, title: `Experience`, color: `#3a3d98`, link: `` },
     { name: `skills`, title: `Skills`, color: `#d52d43`, link: `` },
     { name: `aboutMe`, title: `About Me`, color: `#fff`, link: `` },
     // { name: ``, title: `Batman`, link: `/imBatman`, color: `yellow` },
   ],
-  email = `marander@pm.me`,
-  social = {
+  email: `marander@pm.me`,
+  social: {
     // Usernames
     twitter: `webmaeistro`,
     gitHub: `webmaeistro`,
@@ -35,24 +35,24 @@ module.exports = ({
     linkedIn: `in/martin-andersen/`,
     resumeInPdf: `/CV-20.pdf`, // url or local link
   },
-  homePage = {
+  homePage: {
     availableToHire: true,
     dotColors: ["#0e3e1e", "#6CC551"],
     h1Text: `Hi!, I'm Ma`,
-    h2Text: `I'm a Full Stack Developer who loves working in Backend, I have
-        worked as a software developer since 2006.`,
+    h2Text: `I'm a Full Stack Developer who got back into drupal `,
     typewriter: [
-      `Coding is my passion 😎`,
+      `yay drupal`,
+      `Gutenberg blocks rock`,
       `I'm a 🍕 lover`,
       `I'm a pretty fast learner and always interested in learning new technologies 🤓`,
       `I think one of my values is the <strong>ability to resolve problems<strong>`,
       `I like to share what I know 👨‍🏫`,
-      `In my non-coding hours, I'm at the 🏋‍`,
-      `I also do design and UX work <span style='color: #27ae60;'>occasionally</span>`,
+      `In my non-coding hours, I'm a' family man‍`,
+      `I also do design and UX work using mostly <span style:'color: #27ae60;'>figma.com</span> `,
     ],
   },
   // Color for menu background
-  shapeColor = {
+  shapeColor: {
     link: { color: "#171616", hover: "#fff" },
     shape1: {
       color: `#413f46`,
@@ -67,94 +67,142 @@ module.exports = ({
       opacity: `0.7`,
     },
   },
-  footer = `heart`,
-}) => ({
-  siteMetadata: {
-    title: siteTitle,
-    siteName,
-    siteKeywords,
-    siteDescription,
-    siteUrl,
+  footer: `heart`,
+}
+
+module.exports = function (userOptions = {}) {
+  const options = Object.fromEntries(
+    Object.entries(Object.assign({}, defaultOptions, userOptions)).map(
+      ([key, value]) => {
+        let newValue = value
+
+        if (Array.isArray(value)) {
+          newValue: [
+            ...new Map(
+              [...defaultOptions[key], ...value].map((item) => [
+                item.name,
+                item,
+              ])
+            ).values(),
+          ]
+        } else if (typeof value === "object") {
+          newValue = { ...defaultOptions[key], ...value }
+        }
+
+        return [key, newValue]
+      }
+    )
+  )
+
+  const {
     basePath,
+    path,
+    imagesPath,
+    iconFile,
+    typographyPath,
+    siteTitle,
+    siteUrl,
+    siteName,
+    siteShortName,
+    siteDescription,
+    siteKeywords,
+    useMozJpeg,
     menuLinks,
     email,
     social,
     homePage,
     shapeColor,
     footer,
-  },
-  plugins: [
-    {
-      resolve: `gatsby-plugin-page-creator`,
-      options: {
-        path: `${__dirname}/src/pages`,
-      },
+  } = options
+
+  return {
+    siteMetadata: {
+      title: siteTitle,
+      siteName,
+      siteKeywords,
+      siteDescription,
+      siteUrl,
+      basePath,
+      menuLinks,
+      email,
+      social,
+      homePage,
+      shapeColor,
+      footer,
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `src`,
-        path: path,
+    plugins: [
+      {
+        resolve: `gatsby-plugin-page-creator`,
+        options: {
+          path: `${__dirname}/src/pages`,
+        },
       },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: imagesPath,
+      {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `src`,
+          path: path,
+        },
       },
-    },
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-emotion`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: typographyPath,
+      {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `images`,
+          path: imagesPath,
+        },
       },
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: siteName,
-        short_name: siteShortName,
-        description: siteDescription,
-        lang: `en`,
-        start_url: `/`,
-        background_color: `#000000`,
-        theme_color: `#000000`,
-        display: `standalone`,
-        icon: iconFile,
+      `gatsby-transformer-remark`,
+      `gatsby-plugin-emotion`,
+      {
+        resolve: `gatsby-plugin-typography`,
+        options: {
+          pathToConfigModule: typographyPath,
+        },
       },
-    },
-    {
-      resolve: `gatsby-plugin-transition-link`,
-      options: {
-        layout: require.resolve(`./src/layout`),
+      {
+        resolve: `gatsby-plugin-manifest`,
+        options: {
+          name: siteName,
+          short_name: siteShortName,
+          description: siteDescription,
+          lang: `en`,
+          start_url: `/`,
+          background_color: `#000`,
+          theme_color: `#fff`,
+          display: `standalone`,
+          icon: iconFile,
+        },
       },
-    },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        useMozJpeg,
+      {
+        resolve: `gatsby-plugin-transition-link`,
+        options: {
+          layout: require.resolve(`./src/layout`),
+        },
       },
-    },
-    `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-plugin-nprogress`,
-      options: {
-        // Setting a color is optional.
-        // color: `tomato`,
-        // Disable the loading spinner.
-        showSpinner: true,
+      `gatsby-plugin-offline`,
+      `gatsby-plugin-react-helmet`,
+      {
+        resolve: `gatsby-plugin-sharp`,
+        options: {
+          useMozJpeg,
+        },
       },
-    },
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        exclude: [`/experience/_additionalSkills`],
+      `gatsby-transformer-sharp`,
+      {
+        resolve: `gatsby-plugin-nprogress`,
+        options: {
+          // Setting a color is optional.
+          // color: `tomato`,
+          // Disable the loading spinner.
+          showSpinner: true,
+        },
       },
-    },
-  ],
-})
+      {
+        resolve: `gatsby-plugin-sitemap`,
+        options: {
+          exclude: [`/experience/_additionalSkills`],
+        },
+      },
+    ],
+  }
+}

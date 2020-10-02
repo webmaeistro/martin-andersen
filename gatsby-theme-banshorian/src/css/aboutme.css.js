@@ -34,7 +34,7 @@ const styles = {
       width: 7rem;
     }
   `,
-  aboutShadow: css`
+  aboutShadow: css`{
     color: rgba(0, 0, 0, 0.04);
     position: absolute;
     top: 20%;
@@ -43,7 +43,7 @@ const styles = {
     font-weight: 900;
     width: 200vw;
     text-transform: capitalize;
-  `,
+    `,
 }
 
 export default styles

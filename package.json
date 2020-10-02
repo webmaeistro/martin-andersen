@@ -16,8 +16,8 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.2.2"
   },
-  "name": "gatsby-theme-banshorian",
-  "version": "1.9.2",
+  "name": "banshorian",
+  "version": "2.0.0",
   "main": "index.js",
   "repository": "https://github.com/webmaeistro/martin-andersen.git",
   "author": "Martin Andersen <marander@pm.me>",

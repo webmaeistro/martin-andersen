@@ -5,7 +5,7 @@ describe("usePrevious", () => {
   it("remember the previous value", () => {
     let firstValue = "first"
     let value = firstValue
-    const { result, rerender } = renderHook((value) => usePrevious(value), {
+    const { result, rerender } = renderHook(value => usePrevious(value), {
       initialProps: value,
     })
     expect(result.current).toBeUndefined()

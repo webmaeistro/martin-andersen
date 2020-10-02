@@ -34,7 +34,7 @@ function AnimateItem({ type, title, image }) {
 
     function handleMouseEnter(e) {
       // Set animation
-      animateItems(e, (item) => {
+      animateItems(e, item => {
         anime.remove(item)
         type === "static"
           ? anime({
@@ -63,7 +63,7 @@ function AnimateItem({ type, title, image }) {
     function handleMouseLeave(e) {
       animateItems(
         e,
-        (item) => {
+        item => {
           anime.remove(item)
           anime({
             targets: item,

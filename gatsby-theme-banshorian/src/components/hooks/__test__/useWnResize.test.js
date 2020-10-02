@@ -13,7 +13,7 @@ describe("useMQResize", () => {
       },
     }
 
-    const { result, rerender } = renderHook((ref) => useWnResize(ref, 1), {
+    const { result, rerender } = renderHook(ref => useWnResize(ref, 1), {
       initialProps: ref,
     })
 

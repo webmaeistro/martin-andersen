@@ -8,9 +8,9 @@ module.exports = {
         imagesPath: `src/images/`,
         iconFile: `src/images/icon.png`,
         siteTitle: `Software developer CV Martin Andersen`,
-        siteUrl: `https://martin-andersen.netlify.app`,
+        siteUrl: `https://gatsby-starter-banshorian.vercel.app`,
         siteName: `Martin Andersen developer portfolio | @webmaeistro`,
-        siteShortName: `MA`,
+        siteShortName: `Martin Andersen CV`,
         siteDescription: `This cool App contains information about my work experience as a software developer.`,
         siteKeywords: `Application developer, Full Stack Developer, Front-end`,
         useMozJpeg: true,
@@ -39,14 +39,13 @@ module.exports = {
         homePage: {
           availableToHire: true,
           dotColors: ["#0e3e1e", "#6CC551"],
-          h1Text: `Hi!, I'm Martin Andersen`,
-          h2Text: `I'm a fullstack developer + designer ("unicorn"), based out of Horten, Norway, who loves to make threejs + p5js WEBGL 3D animations. And blazing fast websites I have
-              worked as a software developer since 2011.`,
+          h1Text: `Hi! I'm Martin Andersen`,
+          h2Text: `I'm a fullstack developer + designer ("unicorn"), based out of Horten, Norway. I have worked as a software developer since 2011.`,
           typewriter: [
-            `Coding is my passion 😎`,
+            `People person, coder, designer, infrastructure-as-code guy 😎`,
             `I'm a 🍕 lover`,
-            `I'm a fast learner and always interested in learning new technologies 🤓`,
-            `I think one of my values is the <strong>ability to find solutions to problems<strong>`,
+            `I'm a fast learner and always interested in learning new skills 🤓`,
+            `I think one of my values is the <strong>ability to find solutions<strong>`,
             `I like to share what I know 👨‍🏫`,
             `In my non-coding hours, I'm a electro IoT nerd and a family man.`,
             `I also do design and UX work <span style='color: #27ae60;'>using Figma.com</span>`,
@@ -54,14 +53,14 @@ module.exports = {
         },
         // Color for menu background
         shapeColor: {
-          link: { color: "#171616", hover: "#fff" },
+          link: { color: "#434343", hover: "#ffff" },
           shape1: {
-            color: `#413f46`,
-            opacity: `0.7`,
+            color: `#13547A`,
+            opacity: `0.8`,
           },
           shape2: {
-            color: `#e6e5ea`,
-            opacity: `0.7`,
+            color: `#80D0C7`,
+            opacity: `0.3`,
           },
           shape3: {
             color: `#fff`,
@@ -83,7 +82,7 @@ module.exports = {
           anonymize_ip: true,
           cookie_expires: 0,
           send_page_view: true,
-          cookie_name: `martin-andersen-cv.*.*`,
+          cookie_name: `gatsby-starter-banshorian.vercel.app`,
         },
         // This object is used for configuration specific to this plugin
         pluginConfig: {

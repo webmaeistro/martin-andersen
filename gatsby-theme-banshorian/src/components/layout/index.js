@@ -52,7 +52,7 @@ const Layout = ({
               <div css={styles.layout}>
                 <Menu
                   bgClassName={bgClassName}
-                  numPoints={30}
+                  numPoints={18}
                   duration={600}
                   delayPointsMax={300}
                   delayPerPath={100}
